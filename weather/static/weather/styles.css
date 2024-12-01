@@ -3,165 +3,194 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #5a9bd5, #d3eaf2);
+    background: linear-gradient(to bottom, #5a9bd5, #d3eaf2); /* Background color */
     color: #333;
 }
 
-/* Dark Theme */
-body.dark-theme {
-    background: linear-gradient(to bottom, #0a0d1a, #121c32);
-    color: #f0f0f0;
-}
-
-/* Navbar */
+/* Navbar Styles */
 .navbar {
-    position: fixed;
+    position: fixed; /* Fixed navbar */
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 8px 0;
-    background-color: #4a90e2;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-body.dark-theme .navbar {
-    background-color: #0a0d1a;
+    width: 100%; /* Full width */
+    padding: 8px 0; /* Space around the navbar content */
+    background-color: #4a90e2; /* Solid background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+    z-index: 1000; /* Above other content */
 }
 
 .navbar .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; /* Set max width */
+    margin: 0 auto; /* Center content */
     display: flex;
-    align-items: center;
+    height : 20px;
+    align-items: center; /* Align items vertically center */
 }
 
 .navbar-brand {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
+    font-family: 'Montserrat', sans-serif; /* New font-family for the navbar */
+    font-size: 20px; /* Updated font size */
+    font-weight: 700; /* Bold text */
+    color: #fff; /* White text color */
+    margin-left: 20px; /* Add some margin on the left */
 }
 
-.toggle-theme {
-    cursor: pointer;
-    font-size: 1.5rem;
-    border: none;
-    background: none;
-    color: #fff;
-}
-
-body.dark-theme .toggle-theme {
-    color: #f0f0f0;
-}
-
-/* Container */
+/* Main Container Styles */
 .container {
-    max-width: 1200px;
-    margin: 80px auto;
-    padding: 20px;
+    max-width: 1200px; /* Limit maximum width */
+    margin: 80px auto; /* Center container with space for fixed navbar */
+    padding: 20px; /* Add padding */
 }
 
-/* Weather Card */
+/* Weather Card Styles */
+/* Weather Card Styles */
 .weather-card {
-    background-color: #ffffff;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    margin: 20px auto;
-    max-width: 400px;
-    text-align: center;
+    background-color: #ffffff; /* White background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 30px; /* Space inside the card */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    margin: 20px auto; /* Center the card */
+    max-width: 400px; /* Maximum width of the card */
+    text-align: center; /* Center the text */
+    transition: transform 0.3s; /* Animation for hover effect */
 }
 
-body.dark-theme .weather-card {
-    background-color: #1c2541;
-    color: #f0f0f0;
+.weather-card h1 {
+    font-family: 'Montserrat', sans-serif; /* Stylish font */
+    font-size: 2.5rem; /* Title size */
+    color: #4a90e2; /* Color for title */
+    margin-bottom: 20px; /* Space below title */
+}
+/* Input Group Styles */
+.input-group {
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center the items */
+    align-items: center; /* Align items vertically */
+    margin: 20px 0; /* Space around the input group */
 }
 
-/* Footer */
+/* Input Field Styles */
+.city-input {
+    padding: 12px 15px; /* Padding inside the input */
+    border: 2px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    color: #333; /* Text color */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+    width: 300px; /* Width of the input field */
+    margin-right: 10px; /* Space between input and button */
+}
+
+.city-input:focus {
+    border-color: #4a90e2; /* Highlight border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Submit Button Styles */
+.submit-button {
+    padding: 12px 20px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #4a90e2; /* Button color */
+    color: #fff; /* White text */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.submit-button:hover {
+    background-color: #b59400; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.data-icon {
+    width: 20px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 5px; /* Space between text and icon */
+    vertical-align :middle; /* Align with text */
+}
+
+.weather-form button {
+    padding: 12px 20px; /* Increased padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #4a90e2; /* Button color */
+    color: #fff; /* White text */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, transform 0.3s; /* Animation */
+    
+}
+
+.weather-form button:hover {
+    background-color: #007bb5; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.weather-info {
+    margin-top: 20px; /* Space above weather info */
+    text-align :center;
+    align-items: Center;
+}
+
+.weather-icon {
+    width: 80px; /* Set a size for the weather icon */
+    margin-bottom: 5px; /* Space below the icon */
+}
+
+.city-name {
+    font-size: 1.8rem; /* Font size for city name */
+    color: #333; /* Color for city name */
+    margin: 10px 0; /* Space above and below */
+}
+
+.temp {
+    font-size: 1.5rem; /* Larger font size for temperature */
+    font-weight: bold; /* Bold text */
+    color: #4a90e2; /* Temperature color */
+}
+
+.condition {
+    font-size: 1.5rem; /* Larger font size for temperature */
+    font-weight: bold; /* Bold text */
+    color: #4a90e2; /* Temperature color */
+}
+
+.humidity, .wind-speed, .pressure {
+    font-size: 1.5rem; /* Larger font size for temperature */
+    font-weight: bold; /* Bold text */
+    color: #4a90e2; /* Temperature color */
+}
+
+/* Footer Styles */
 .footer {
-    position: fixed;
+    position: fixed; /* Fixes the footer to the bottom */
     bottom: 0;
     left: 0;
-    width: 100%;
-    background-color: #4a90e2;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    width: 100%; /* Full width */
+    background-color: #4a90e2; /* Match with navbar */
+    color: white; /* White text */
+    text-align: center; /* Center the text */
+    padding: 10px 0; /* Space around the content */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    z-index: 1000; /* Above other content */
 }
 
-body.dark-theme .footer {
-    background-color: #0a0d1a;
+.footer .container {
+    max-width: 1200px; /* Set max width */
+    margin: 0 auto; /* Center content */
+    height : 20px;
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
     .navbar {
-        padding: 10px 0;
+        padding: 10px 0; /* Adjust padding for small screens */
     }
+
     .weather-card {
-        padding: 20px;
+        padding: 20px; /* Adjust padding for small screens */
     }
-}
 
-
-.language-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-button {
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-body.dark-theme .dropdown-button {
-    background-color: #0a0d1a;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #ffffff;
-    min-width: 150px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-.dropdown-menu li {
-    list-style: none;
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 10px 15px;
-    color: #333;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.dropdown-menu a:hover {
-    background-color: #f1f1f1;
-}
-
-body.dark-theme .dropdown-menu {
-    background-color: #1c2541;
-}
-
-body.dark-theme .dropdown-menu a {
-    color: #f0f0f0;
-}
-
-.dropdown-menu.show {
-    display: block;
+    .weather-form input {
+        width: 100%; /* Full width on small screens */
+    }
 }

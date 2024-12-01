@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,26 +15,6 @@
     <nav class="navbar">
         <div class="container">
             <span class="navbar-brand">Weather App</span>
-            
-            <!-- Theme Toggle Button -->
-            <button class="toggle-theme" id="theme-toggle">
-                <i class="fas fa-moon"></i> <!-- Moon icon for dark theme -->
-            </button>
-
-            <!-- Language Dropdown -->
-            <div class="language-dropdown">
-                <button class="dropdown-button">
-                    Language <i class="fas fa-chevron-down"></i>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="?lang=en">English</a></li>
-                    <li><a href="?lang=es">Español</a></li>
-                    <li><a href="?lang=fr">Français</a></li>
-                    <li><a href="?lang=de">Deutsch</a></li>
-                    <li><a href="?lang=hi">हिन्दी</a></li>
-                    <li><a href="?lang=zh">中文</a></li>
-                </ul>
-            </div>
         </div>
     </nav>
 
@@ -55,66 +36,34 @@
             <div class="weather-info">
                 <p class="temp">
                     {{ weather_data.temperature }}°C
-                    <i class="fas fa-thermometer-half data-icon" title="Temperature"></i>
+                    <i class="fas fa-thermometer-half data-icon" title="Temperature"></i> <!-- Temperature icon -->
                 </p>
                 <p class="condition">
                     {{ weather_data.description }}
-                    <i class="fas fa-cloud data-icon" title="Condition"></i>
+                    <i class="fas fa-cloud data-icon" title="Condition"></i> <!-- Condition icon -->
                 </p>
                 <p class="humidity">
                     Humidity: {{ weather_data.humidity }}%
-                    <i class="fas fa-tint data-icon" title="Humidity"></i>
+                    <i class="fas fa-tint data-icon" title="Humidity"></i> <!-- Humidity icon -->
                 </p>
                 <p class="wind-speed">
                     Wind Speed: {{ weather_data.wind_speed }} m/s
-                    <i class="fas fa-wind data-icon" title="Wind Speed"></i>
+                    <i class="fas fa-wind data-icon" title="Wind Speed"></i> <!-- Wind speed icon -->
                 </p>
                 <p class="pressure">
                     Pressure: {{ weather_data.pressure }} hPa
-                    <i class="fas fa-weight-hanging data-icon" title="Pressure"></i>
+                    <i class="fas fa-weight-hanging data-icon" title="Pressure"></i> <!-- Pressure icon -->
                 </p>
             </div>
             {% endif %}
         </div>
     </div>
-
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 Weather App. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- JavaScript for Theme Toggle -->
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
-
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-theme');
-            const icon = themeToggle.querySelector('i');
-            if (body.classList.contains('dark-theme')) {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-            }
-        });
-
-        // Dropdown menu functionality
-        const dropdownButton = document.querySelector('.dropdown-button');
-        const dropdownMenu = document.querySelector('.dropdown-menu');
-
-        dropdownButton.addEventListener('click', () => {
-            dropdownMenu.classList.toggle('show');
-        });
-
-        window.addEventListener('click', (e) => {
-            if (!e.target.matches('.dropdown-button')) {
-                dropdownMenu.classList.remove('show');
-            }
-        });
-    </script>
 </body>
 </html>
